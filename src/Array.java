@@ -35,11 +35,10 @@ public class Array {
         // For binary search we need sorted array so including sorting time as well
         System.out.println("Elapsed Binary Search(including sort) time: " + (timeD - timeB));
 
-        // Remove element
+        // Remove element in the sorted array and shift other elements - Naive
         //System.out.println(Arrays.toString(removeArray(arr, 8)));
 
-        // Add element considering there was element deleted otherwise last one will be
-        // kicked out
+        // Add element in sorted array and shift other elements - Naive
         //System.out.println(Arrays.toString(addArray(arr, 7)));
     }
 
