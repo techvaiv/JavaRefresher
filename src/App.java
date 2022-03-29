@@ -8,7 +8,8 @@ public class App {
     }
 
     public static void main(String args[]) {
-        //App obj = new App();
+        App obj = new App();
         //obj.sum(20, 20);// now ambiguity
+        obj.sum(20L, 20);
     }
 }

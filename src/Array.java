@@ -20,21 +20,27 @@ public class Array {
         // Search element
         System.out.println(searchArray(arr, 245463643));
 
-        // Sort
-        //sort("merge", arr);
-        //System.out.println(Arrays.toString(sort("merge", arr)));
         long timeB = System.currentTimeMillis();
-        System.out.println("Elapsed Sort time: " + (timeB - timeA));
-        // Binary search on sorted array
-        //System.out.println(binarySearch(arr, 245463643));
+        System.out.println("Elapsed Linear Search time: " + (timeB - timeA));
+
+        // Sort
+        sort("merge", arr);
+        //System.out.println(Arrays.toString(sort("merge", arr)));
         long timeC = System.currentTimeMillis();
-        System.out.println("Elapsed Total time: " + (timeC - timeA));
+        System.out.println("Elapsed Sort time: " + (timeC - timeB));
+
+        // Binary search on sorted array
+        System.out.println(binarySearch(arr, 245463643));
+        long timeD = System.currentTimeMillis();
+        // For binary search we need sorted array so including sorting time as well
+        System.out.println("Elapsed Binary Search(including sort) time: " + (timeD - timeB));
+
         // Remove element
-        // System.out.println(Arrays.toString(removeArray(arr, 8)));
+        //System.out.println(Arrays.toString(removeArray(arr, 8)));
 
         // Add element considering there was element deleted otherwise last one will be
         // kicked out
-        // System.out.println(Arrays.toString(addArray(arr, 7)));
+        //System.out.println(Arrays.toString(addArray(arr, 7)));
     }
 
     private static String binarySearch(int[] arr, int i) {
